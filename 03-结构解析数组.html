@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>数组结构解析</title>
+</head>
+<body>
+	
+</body>
+<script type="text/javascript">
+	/*let [a,b,c] =[1,2,3];
+	console.log(a,b,c);*/
+
+	//程序按顺序赋值，当没有值得时候为undefined
+	/*let [a,b,c] = [1,2];
+	console.log(a,b,c);*/
+
+
+	//此时c的值是19，
+	/*let [a,b,c=19] = [1,2];
+	console.log(a,b,c);
+*/
+
+	//此时c的值是19，
+	/*let [a,b,c=19] = [1,2,undefined];
+	console.log(a,b,c);
+*/
+	//此时c的值是null
+	/*let [a,b,c=19] = [1,2,null];
+	console.log(a,b,c);*/
+
+
+	//按顺序来
+/*	let [a,[b,c],d] = [1,[2,3],4];
+	console.log(a,b,c,d);
+*/
+
+	//按顺序来
+	let [a,[b,c],d] = [1,[2],4];
+	console.log(a,b,c,d);
+</script>
+</html>
