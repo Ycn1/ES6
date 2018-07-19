@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>let变量的定义</title>
+</head>
+<body>
+	
+</body>
+<script type="text/javascript">
+	//var 定义变量，下面的会覆盖前面的
+	/*var name = 19;
+	var name = 18;
+	console.log(name);*/
+
+
+	//let 定义的变量不能重复定义(在同一个块内)
+/*	let name = 19;
+
+	let name = 18;
+	console.log(name);*/
+	
+	// showname();
+	//var 定义的变量的作用范围是函数
+	/*function showage(){
+		var age = 19;
+		console.log("out::",age);
+		function showageagain (){
+			var age = 18;
+			console.log("in::",age);
+		}
+		showageagain();
+		console.log(age);
+	}
+	showage();*/
+	
+
+	//此时可以把最外层的script看做一个函数
+	  {
+	 	var  age = 19;
+	 }
+	 console.log(age);
+	//let 定义的变量的作用范围是块，一个花括号包含的是一个块
+	/*function showage(){
+		let age = 19;
+		console.log("out::",age);
+		function showageagain (){
+			let age = 18;
+			console.log("in::",age);
+		}
+		showageagain();
+		console.log(age);
+	}
+	showage();*/
+
+	 // {
+	 // 	let age = 19;
+	 // }
+	 // console.log(age);
+
+</script>
+</html>
