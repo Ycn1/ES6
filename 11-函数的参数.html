@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>函数参数</title>
+</head>
+<body>
+	
+</body>
+
+<script>
+
+	/*function show (){
+		console.log("hello")
+	}
+
+	show();*/
+
+	/*function show (msg){
+		if(typeof msg == 'undefined'){
+			console.log("hello")
+		}else{
+			console.log(msg);
+		}
+	}
+
+	show();
+	show('hi');*/
+	
+
+	//一般都是把必须要传的参数放到前面
+/*function show(name,msg = "hello"){
+	console.log(name,msg);
+}
+
+show("Alisa");
+*/
+//结构解析
+/*
+function show (name,{age = 18,sex= "女"} = {}){
+	console.log(name,age,sex);
+}
+
+show("Anna",{age :17,sex :'男'});
+*/
+
+//rest参数
+/*function show (name,...arg){
+	console.log(name,arg[0],arg[1]);
+}
+
+show("Anna",...[17,'男']);
+
+
+show ('AMy',19,'女');*/
+
+
+
+let i = 99;
+
+//每次调用age的值是重新计算的
+function show (age = i+1){
+	console.log(age);
+}
+
+show();
+ i=100;
+ show();
+
+
+</script>
+</html>
