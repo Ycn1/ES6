@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>箭头函数</title>
+</head>
+<body>
+	
+</body>
+
+<script>
+	//此时由于定时器里面的this指向window，所以结果是undefined
+	/*function Timer(id) {
+		this.id =id;
+		setTimeout(function(){
+			console.log(this.id);
+		},500)
+	}
+
+	let s1 = new Timer();*/
+
+	function Timer(id) {
+		this.id =id;
+		setTimeout(function()=>{
+			console.log(this.id);
+		},500)
+	}
+
+	let s1 = new Timer();
+
+
+</script>
+</html>
