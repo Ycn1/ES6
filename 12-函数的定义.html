@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>函数的定义</title>
+</head>
+<body>
+	
+</body>
+
+<script type="text/javascript">
+	/*
+	function sum(x,y){
+		console.log(x,y);
+		return x+y;
+	}
+	console.log(sum(1,2));*/
+
+	/*
+	let sum = (x,y) => {
+		console.log(x,y);
+		return x+y;
+	}
+
+	console.log(sum(11,22));
+	*/
+
+	//简写
+
+	/*let sum = (x,y) => x+y;
+	console.log(sum(11,22));
+*/
+	/*let sum = (x) => {
+		console.log(x);
+		return x+10;
+	}
+
+	console.log(sum(11));	*/
+	//简写  (仅仅有一个参数)
+	/*let sum = x =>  x+10;
+	
+
+	console.log(sum(11));	*/
+
+	//没有参数
+/*	let show = () =>{
+		console.log("hello")
+	}
+
+	show();*/
+
+
+	//排序
+
+	let arr = [11,22,44,66,33];
+
+
+	//正序
+	/*arr.sort();
+	console.log(arr);*/
+
+	//倒序
+	/*arr.sort(function(n1,n2){
+		return n2-n1;
+	})
+	console.log(arr);
+*/
+	
+	//倒序
+	arr.sort((n1,n2) => {return n2-n1});
+
+	console.log(arr);
+</script>
+</html>
