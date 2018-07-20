@@ -1,0 +1,113 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>对象</title>
+</head>
+<body>
+	
+</body>
+
+<script type="text/javascript">
+
+	//原先的定义对象的方法
+
+	/*function Person(name,age){
+
+		this.name = name;
+		this.age = age;
+	}
+	Person.prototype = {
+		constructor:Person,
+
+		showName:function(){
+			console.log("I am " +this.name);
+		},	
+
+
+		showAge:function(){
+
+			console.log("I am " +this.age + "  years old");
+		}
+	}
+	
+
+	//静态方法 调用的时候需要Person.sayHi(),
+	Person.sayHi = function(){
+		console.log("hello");
+	}
+*/
+
+	// Person.sayHi();
+	//p1.sayHi();//error
+
+	// var p1 = new Person("Anna",18);
+
+	//没有变量的提升
+	class  Person{
+
+		constructor(name,age){
+			this.name = name;
+			this.age = age;
+		}
+
+		showName(){
+
+			console.log("I am " +this.name);
+		}
+
+		showAge(){
+
+			console.log("I am " +this.age + "  years old");
+		}
+
+
+		//Person上的静态方法
+		static sayHi(){
+			console.log("hi");
+		}
+	}
+
+	//继承Person类
+	class Student extends Person{
+
+		constructor(name,age,major){
+			super(name,age);
+			this.major = major;
+		}
+
+		showMajor(){
+			console.log("I am from " +  this.major);
+		}
+
+		//Student自己的函数会覆盖父类上的同名函数
+		showName(){
+			 console.log("I am " + this.name + "  and i  am  a student");
+		}
+
+	}
+
+	let s1 = new Student("Alisa",17,'computor');
+	 
+	 s1.showMajor();
+	 s1.showName();
+	 
+	 //也可以继承父类上的静态方法
+	 Student.sayHi();
+	
+
+	//let p = new Person('Alisa',19);
+
+
+	// p.sayHi();//error
+
+
+	// Person.sayHi(); //true
+
+	// p.showName();
+	// p.showAge();
+	// console.log(p);
+	//类型为function
+	// console.log(typeof Person);
+</script>
+</html>
