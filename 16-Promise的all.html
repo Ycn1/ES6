@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>all</title>
+</head>
+<body>
+	
+</body>
+
+<script type="text/javascript">
+	
+	let getLoadPromise  = (url) =>{
+		let promise = new Promise((resolve,reject)=>{
+			let image = new Image();
+
+			image.onload = () =>{
+				resolve(url);
+			}
+
+			image.onerror = ( ) =>{
+				reject(url);
+			}
+
+			image.src  = url;
+
+		});
+
+		return promise;
+	}
+
+
+	let ap = ['images/1.jpg','images/11.jpg','images/1.jpg','images/1.jpg']
+	.map((url)=>{
+		return getLoadPromise(url);
+	});
+
+	//如果数组里面的执行的都正确，则返回每一个数组的返回值，如果有执行错误的，则会返回第一个错误的返回值。
+	let p = Promise.all(ap);
+	p.then((val)=>{
+		console.log('resolve...',val);
+	},(val)=>{
+		console.log('reject...',val);
+	})
+
+</script>
+
+</html>
