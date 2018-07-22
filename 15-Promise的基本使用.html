@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Promise</title>
+</head>
+<body>
+	
+</body>
+
+<script type="text/javascript">
+	
+	/*let getLoadImage = (url) =>{
+		
+		let  promise = new Promise((resolve,reject) =>{
+			let img = new Image();
+			img.onload = function(){
+				resolve(url);
+			} 
+			img.onerror  = function(){
+				reject(url)
+			}
+
+			img.src = url;
+		});
+		
+		
+		return promise;
+	}
+	
+	let p1 = getLoadImage('images/11.jpg');
+
+	p1.then((url)=>{
+		console.log("success...loaded");
+	},(url)=>{
+		console.log("error...");
+	})
+
+
+	//catch和reject方法一样都是接收错误时候的消息，但是上面的reject会覆盖下面的catch。
+	.catch((err)=>{
+		console.log("errot::",'error');
+	})
+*/
+  let promise = new Promise((resolve,reject)=>{
+  	console.log("hahhah");
+  }) 
+
+  console.log(promise);
+</script>
+</html>
