@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>all</title>
+</head>
+<body>
+	
+</body>
+
+<script type="text/javascript">
+	let p1 = new Promise ((resolve,reject)=>{
+		setInterval(()=>{
+			resolve('p1');
+		},1000)
+		setInterval(()=>{
+			reject('p1');
+		},200)
+	})
+
+
+	let p2 = new Promise ((resolve,reject)=>{
+		setInterval(()=>{
+			resolve('p2');
+		},500)
+	})
+
+	//哪一个先发生变化，下面的then 方法先执行哪一个；
+	let p =  Promise.race([p1,p2]);
+
+
+	p.then((val)=>{
+		console.log('....success',val);
+	},(val)=>{
+		console.log('....error',val);
+
+	})
+</script>
+
+</html>
