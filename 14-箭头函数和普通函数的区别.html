@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>箭头函数和普通函数的区别</title>
+</head>
+<body>
+	
+</body>
+ <script type="text/javascript">
+
+
+ 	/*let show  =(...args)=>{
+
+ 		console.log(args);
+ 	}
+
+ 	show(11,22,33);
+ 	*/
+ 	/*function fact (n){
+ 		if(n<=1){
+ 			return 1;
+ 		}else{
+ 			return n* fact(n-1);
+ 		}
+ 	}
+
+ 	let Fnfact  = fact;
+
+ 	fact = null;
+ 	console.log(Fnfact(5));*/
+
+ 	//上面的在fact = null之后，会出现错误。使用arguments.callee解决此问题。
+
+ 	/*function fact (n){
+ 		if(n<=1){
+ 			return 1;
+ 		}else{
+ 			return n* arguments.callee(n-1);
+ 		}
+ 	}
+
+ 	let Fnfact  = fact;
+
+ 	fact = null;
+ 	console.log(Fnfact(5));*/
+
+ 	let show =()=>{
+ 		console.log();
+ 	}
+
+ 	console.log(show());
+
+
+ </script>
+</html>
